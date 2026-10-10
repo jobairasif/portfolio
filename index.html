@@ -235,8 +235,8 @@ nav.hide{transform:translateY(-100%)}
 .shots .pf-stage{transform:none}
 .pf-shot{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .5s var(--ease)}
 .pf-shot.on{opacity:1}
-.pf-thumbs{position:absolute;z-index:3;left:12px;bottom:12px;display:flex;gap:6px;padding:5px;border-radius:12px;background:rgba(255,255,255,.85);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);box-shadow:0 10px 24px -14px rgba(11,21,48,.5)}
-.pf-thumbs button{width:52px;aspect-ratio:15/11;border-radius:7px;overflow:hidden;opacity:.55;outline:2px solid transparent;outline-offset:1px;transition:opacity .3s,outline-color .3s}
+.pf-thumbs{position:absolute;z-index:3;left:12px;bottom:12px;max-width:calc(100% - 24px);display:flex;gap:6px;padding:5px;border-radius:12px;background:rgba(255,255,255,.85);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);box-shadow:0 10px 24px -14px rgba(11,21,48,.5)}
+.pf-thumbs button{flex:0 1 52px;min-width:0;aspect-ratio:15/11;border-radius:7px;overflow:hidden;opacity:.55;outline:2px solid transparent;outline-offset:1px;transition:opacity .3s,outline-color .3s}
 .pf-thumbs button:hover,.pf-thumbs button[aria-pressed="true"]{opacity:1}
 .pf-thumbs button[aria-pressed="true"],.pf-thumbs button:focus-visible{outline-color:var(--blue)}
 .pf-thumbs img{display:block;width:100%;height:100%;object-fit:cover}
@@ -878,9 +878,35 @@ footer{background:var(--deep);color:var(--on-deep);padding:2.6rem 0}
         </div>
       </article>
 
-      <!-- 4 · Folio -->
-      <article class="pf w6 reveal" style="--d:.1s;--p-bg:#FFFFFF;--p-ink:#141414;--p-acc:#E4572E" data-cat="wordpress">
-        <div class="pf-media ar">
+      <!-- 4 · Studio Classics -->
+      <article class="pf w6 reveal" style="--d:.1s;--p-acc:#1F3B2A" data-cat="shopify">
+        <div class="pf-media ar shots">
+          <div class="pf-stage">
+            <img class="pf-shot on" src="assets/work/studioclassics-1.jpg" alt="Studio Classics — project cover" width="1400" height="1026" loading="lazy" decoding="async">
+            <img class="pf-shot" src="assets/work/studioclassics-2.jpg" alt="Studio Classics — homepage on desktop and mobile" width="1400" height="1050" loading="lazy" decoding="async">
+            <img class="pf-shot" src="assets/work/studioclassics-3.jpg" alt="Studio Classics — brands page" width="1400" height="1050" loading="lazy" decoding="async">
+            <img class="pf-shot" src="assets/work/studioclassics-4.jpg" alt="Studio Classics — B2B catalog" width="1400" height="1050" loading="lazy" decoding="async">
+            <img class="pf-shot" src="assets/work/studioclassics-5.jpg" alt="Studio Classics — partner signup flow" width="1400" height="1050" loading="lazy" decoding="async">
+          </div>
+          <div class="pf-thumbs" role="group" aria-label="Studio Classics screenshots">
+            <button type="button" aria-pressed="true" aria-label="Show project cover"><img src="assets/work/studioclassics-1-thumb.jpg" alt="" width="240" height="176" loading="lazy" decoding="async"></button>
+            <button type="button" aria-pressed="false" aria-label="Show homepage on desktop and mobile"><img src="assets/work/studioclassics-2-thumb.jpg" alt="" width="240" height="180" loading="lazy" decoding="async"></button>
+            <button type="button" aria-pressed="false" aria-label="Show brands page"><img src="assets/work/studioclassics-3-thumb.jpg" alt="" width="240" height="180" loading="lazy" decoding="async"></button>
+            <button type="button" aria-pressed="false" aria-label="Show B2B catalog"><img src="assets/work/studioclassics-4-thumb.jpg" alt="" width="240" height="180" loading="lazy" decoding="async"></button>
+            <button type="button" aria-pressed="false" aria-label="Show partner signup flow"><img src="assets/work/studioclassics-5-thumb.jpg" alt="" width="240" height="180" loading="lazy" decoding="async"></button>
+          </div>
+        </div>
+        <div class="pf-body">
+          <div class="pf-top"><span class="pf-cat">Shopify · B2B</span><a class="pf-link" href="https://studio-classics.com" target="_blank" rel="noopener" aria-label="Visit live site: Studio Classics"><span>↗</span></a></div>
+          <h3>Studio Classics</h3>
+          <p>B2B wholesale store on Shopify for Aloe Vital &amp; SonnenEule. Tiered pricing, partner accounts, and EU-wide delivery.</p>
+          <ul class="pf-tags"><li>Shopify</li><li>B2B</li><li>Wholesale</li></ul>
+        </div>
+      </article>
+
+      <!-- 5 · Folio -->
+      <article class="pf w6 reveal" style="--p-bg:#FFFFFF;--p-ink:#141414;--p-acc:#E4572E" data-cat="wordpress">
+        <div class="pf-media">
           <span class="pf-metric"><b>Page 2 → Top 3</b> on primary term</span>
           <div class="pf-stage">
             <div class="pf-browser">
@@ -903,33 +929,6 @@ footer{background:var(--deep);color:var(--on-deep);padding:2.6rem 0}
           <h3>Folio Studio</h3>
           <p>Editorial WP site with deep technical SEO. From page-2 obscurity to a top-3 ranking on the primary term.</p>
           <ul class="pf-tags"><li>Editorial WordPress</li><li>Technical SEO</li></ul>
-        </div>
-      </article>
-
-      <!-- 5 · Civic -->
-      <article class="pf w6 reveal" style="--p-bg:#F2F4F8;--p-ink:#14213D;--p-acc:#F2A20C" data-cat="shopify">
-        <div class="pf-media">
-          <div class="pf-stage">
-            <div class="pf-browser">
-              <div class="pf-chrome"><i></i><i></i><i></i><span class="pf-url">civic bicycles · shopify</span></div>
-              <div class="pf-viewport">
-                <div class="site v-shop">
-                  <div class="s-nav"><b>Civic</b><span></span><span></span><span></span><em>Build</em></div>
-                  <div class="s-hero"><div><h4>Build your bike.</h4><u></u><u class="sh"></u><em>Start building</em></div><div class="s-art"><i></i></div></div>
-                  <div class="s-grid"><div><i></i><u></u><u class="sh"></u></div><div><i></i><u></u><u class="sh"></u></div><div><i></i><u></u><u class="sh"></u></div></div>
-                  <div class="s-band"><h5>Pay monthly</h5><u></u><u class="sh"></u></div>
-                  <div class="s-grid"><div><i></i><u></u></div><div><i></i><u></u></div><div><i></i><u></u></div></div>
-                  <div class="s-foot"><u></u><u></u><u></u><u></u></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="pf-body">
-          <div class="pf-top"><span class="pf-cat">Shopify · D2C</span><a class="pf-link" href="#" aria-label="Live preview: Civic Bicycles"><span>↗</span></a></div>
-          <h3>Civic Bicycles</h3>
-          <p>Brand-forward Shopify storefront with a financing widget and inventory-aware build-your-bike flow.</p>
-          <ul class="pf-tags"><li>Financing widget</li><li>Build-your-bike flow</li></ul>
         </div>
       </article>
 
