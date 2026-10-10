@@ -229,6 +229,17 @@ nav.hide{transform:translateY(-100%)}
 .pf:hover .pf-phone{transform:translateZ(40px) translateY(-16px)}
 .pf-phone-screen{position:relative;width:100%;height:100%;border-radius:17px;overflow:hidden;container-type:inline-size;background:var(--p-bg)}
 .pf-phone-screen::before{content:"";position:absolute;top:5px;left:50%;width:34%;height:9px;border-radius:9px;background:#0B1530;transform:translateX(-50%);z-index:2}
+/* real projects: screenshots fill the media, thumbnails switch between them */
+.pf-media.ar{height:auto;aspect-ratio:15/11}
+.pf-media.shots{z-index:5}
+.shots .pf-stage{transform:none}
+.pf-shot{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .5s var(--ease)}
+.pf-shot.on{opacity:1}
+.pf-thumbs{position:absolute;z-index:3;left:12px;bottom:12px;display:flex;gap:6px;padding:5px;border-radius:12px;background:rgba(255,255,255,.85);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);box-shadow:0 10px 24px -14px rgba(11,21,48,.5)}
+.pf-thumbs button{width:52px;aspect-ratio:15/11;border-radius:7px;overflow:hidden;opacity:.55;outline:2px solid transparent;outline-offset:1px;transition:opacity .3s,outline-color .3s}
+.pf-thumbs button:hover,.pf-thumbs button[aria-pressed="true"]{opacity:1}
+.pf-thumbs button[aria-pressed="true"],.pf-thumbs button:focus-visible{outline-color:var(--blue)}
+.pf-thumbs img{display:block;width:100%;height:100%;object-fit:cover}
 .pf-flag,.pf-metric{position:absolute;z-index:3;top:14px;font-size:.72rem;border-radius:999px}
 .pf-flag{right:14px;font-family:var(--mono);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;padding:.38rem .75rem;background:var(--blue);color:#fff;box-shadow:0 8px 18px -8px rgba(36,99,199,.8)}
 .pf-metric{left:14px;display:inline-flex;align-items:center;gap:.4rem;padding:.38rem .8rem .38rem .65rem;background:rgba(255,255,255,.82);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.9);color:var(--ink);font-weight:500;box-shadow:0 10px 24px -14px rgba(11,21,48,.4)}
@@ -803,74 +814,73 @@ footer{background:var(--deep);color:var(--on-deep);padding:2.6rem 0}
     -->
     <div class="pf-grid" id="pfGrid">
 
-      <!-- 1 · Northwind -->
-      <article class="pf w7 reveal" data-cat="shopify" style="--p-bg:#F6EFE6;--p-ink:#3B2A20;--p-acc:#C8763A">
-        <div class="pf-media">
-          <span class="pf-flag">Featured</span>
+      <!-- 1 · SonnenEule -->
+      <article class="pf w6 reveal" style="--p-acc:#F5A623" data-cat="shopify">
+        <div class="pf-media ar shots">
           <div class="pf-stage">
-            <div class="pf-browser">
-              <div class="pf-chrome"><i></i><i></i><i></i><span class="pf-url">northwind · shopify</span></div>
-              <div class="pf-viewport">
-                <div class="site v-shop">
-                  <div class="s-nav"><b>Northwind</b><span></span><span></span><span></span><em>Subscribe</em></div>
-                  <div class="s-hero"><div><h4>Single-origin coffee, delivered.</h4><u></u><u class="sh"></u><em>Start a subscription</em></div><div class="s-art"><i></i></div></div>
-                  <div class="s-grid"><div><i></i><u></u><u class="sh"></u></div><div><i></i><u></u><u class="sh"></u></div><div><i></i><u></u><u class="sh"></u></div></div>
-                  <div class="s-band"><h5>Roasted weekly</h5><u></u><u class="sh"></u></div>
-                  <div class="s-grid"><div><i></i><u></u></div><div><i></i><u></u></div><div><i></i><u></u></div></div>
-                  <div class="s-foot"><u></u><u></u><u></u><u></u></div>
-                </div>
-              </div>
-            </div>
-            <div class="pf-phone"><div class="pf-phone-screen">
-              <div class="site v-shop m">
-                <div class="s-nav"><b>Northwind</b><em>≡</em></div>
-                <div class="s-hero"><div><h4>Single-origin coffee, delivered.</h4><u></u><em>Subscribe</em></div><div class="s-art"><i></i></div></div>
-                <div class="s-grid"><div><i></i><u></u></div><div><i></i><u></u></div></div>
-                <div class="s-foot"><u></u><u></u></div>
-              </div>
-            </div></div>
+            <img class="pf-shot on" src="assets/work/sonneneule-1.jpg" alt="SonnenEule — project cover" width="1400" height="1027" loading="lazy" decoding="async">
+            <img class="pf-shot" src="assets/work/sonneneule-2.jpg" alt="SonnenEule — cart drawer with free-shipping bar" width="1400" height="1027" loading="lazy" decoding="async">
+            <img class="pf-shot" src="assets/work/sonneneule-3.jpg" alt="SonnenEule — product page" width="1400" height="1027" loading="lazy" decoding="async">
+          </div>
+          <div class="pf-thumbs" role="group" aria-label="SonnenEule screenshots">
+            <button type="button" aria-pressed="true" aria-label="Show project cover"><img src="assets/work/sonneneule-1-thumb.jpg" alt="" width="240" height="176" loading="lazy" decoding="async"></button>
+            <button type="button" aria-pressed="false" aria-label="Show cart drawer with free-shipping bar"><img src="assets/work/sonneneule-2-thumb.jpg" alt="" width="240" height="176" loading="lazy" decoding="async"></button>
+            <button type="button" aria-pressed="false" aria-label="Show product page"><img src="assets/work/sonneneule-3-thumb.jpg" alt="" width="240" height="176" loading="lazy" decoding="async"></button>
           </div>
         </div>
         <div class="pf-body">
-          <div class="pf-top"><span class="pf-cat">Shopify · DTC</span><a class="pf-link" href="#" aria-label="Live preview: Northwind Coffee Co."><span>↗</span></a></div>
-          <h3>Northwind Coffee Co.</h3>
-          <p>End-to-end Shopify rebuild for a single-origin roaster. Subscription flow + custom checkout extension.</p>
-          <ul class="pf-tags"><li>Shopify rebuild</li><li>Subscriptions</li><li>Checkout extension</li></ul>
+          <div class="pf-top"><span class="pf-cat">Shopify · DTC</span><a class="pf-link" href="https://sonneneule.com" target="_blank" rel="noopener" aria-label="Visit live site: SonnenEule"><span>↗</span></a></div>
+          <h3>SonnenEule</h3>
+          <p>Shopify store build for a German cleaning brand. Hero, product pages, savings sets, and Deal-of-the-Week — rebuilt for the DE/AT rollout.</p>
+          <ul class="pf-tags"><li>Shopify</li><li>Liquid</li><li>DTC</li><li>Bundles</li></ul>
         </div>
       </article>
 
-      <!-- 2 · Helmsley -->
-      <article class="pf w5 reveal" style="--d:.1s;--p-bg:#F7F6F2;--p-ink:#1C2B44;--p-acc:#B8955A" data-cat="wordpress">
-        <div class="pf-media">
-          <span class="pf-flag">Featured</span>
-          <span class="pf-metric"><b>+41%</b> qualified leads</span>
+      <!-- 2 · Black Spires Merseburg -->
+      <article class="pf w6 reveal" style="--d:.1s;--p-acc:#96231E" data-cat="wordpress">
+        <div class="pf-media ar shots">
           <div class="pf-stage">
-            <div class="pf-browser">
-              <div class="pf-chrome"><i></i><i></i><i></i><span class="pf-url">helmsley · wordpress</span></div>
-              <div class="pf-viewport">
-                <div class="site v-service">
-                  <div class="s-nav"><b>Helmsley &amp; Sons</b><span></span><span></span><span></span><em>Consult</em></div>
-                  <div class="s-hero"><div><h4>Legal counsel, by jurisdiction.</h4><u></u><u class="sh"></u><em>Book a consultation</em></div><div class="s-art"><i></i></div></div>
-                  <div class="s-grid"><div><i></i><u></u><u class="sh"></u></div><div><i></i><u></u><u class="sh"></u></div><div><i></i><u></u><u class="sh"></u></div></div>
-                  <div class="s-band"><h5>Case studies</h5><u></u><u class="sh"></u></div>
-                  <div class="s-grid"><div><i></i><u></u></div><div><i></i><u></u></div><div><i></i><u></u></div></div>
-                  <div class="s-foot"><u></u><u></u><u></u><u></u></div>
-                </div>
-              </div>
-            </div>
+            <img class="pf-shot on" src="assets/work/blackspires-1.jpg" alt="Black Spires Merseburg — project cover" width="1400" height="1027" loading="lazy" decoding="async">
+            <img class="pf-shot" src="assets/work/blackspires-2.jpg" alt="Black Spires Merseburg — signup panel" width="1400" height="1027" loading="lazy" decoding="async">
+            <img class="pf-shot" src="assets/work/blackspires-3.jpg" alt="Black Spires Merseburg — course schedule" width="1400" height="1027" loading="lazy" decoding="async">
+          </div>
+          <div class="pf-thumbs" role="group" aria-label="Black Spires Merseburg screenshots">
+            <button type="button" aria-pressed="true" aria-label="Show project cover"><img src="assets/work/blackspires-1-thumb.jpg" alt="" width="240" height="176" loading="lazy" decoding="async"></button>
+            <button type="button" aria-pressed="false" aria-label="Show signup panel"><img src="assets/work/blackspires-2-thumb.jpg" alt="" width="240" height="176" loading="lazy" decoding="async"></button>
+            <button type="button" aria-pressed="false" aria-label="Show course schedule"><img src="assets/work/blackspires-3-thumb.jpg" alt="" width="240" height="176" loading="lazy" decoding="async"></button>
           </div>
         </div>
         <div class="pf-body">
-          <div class="pf-top"><span class="pf-cat">WordPress · Services</span><a class="pf-link" href="#" aria-label="Live preview: Helmsley &amp; Sons Law"><span>↗</span></a></div>
-          <h3>Helmsley &amp; Sons Law</h3>
-          <p>Custom WP build with case-study CMS and a jurisdictional landing-page system. 41% lift in qualified leads.</p>
-          <ul class="pf-tags"><li>Case-study CMS</li><li>Landing-page system</li></ul>
+          <div class="pf-top"><span class="pf-cat">WordPress · Club site</span><a class="pf-link" href="https://www.blackspires.de" target="_blank" rel="noopener" aria-label="Visit live site: Black Spires Merseburg"><span>↗</span></a></div>
+          <h3>Black Spires Merseburg</h3>
+          <p>Club launch site for Merseburg's first youth baseball &amp; softball team. Hero, course schedule, and signup form.</p>
+          <ul class="pf-tags"><li>WordPress</li><li>Elementor</li><li>Forms</li></ul>
         </div>
       </article>
 
-      <!-- 3 · Folio -->
-      <article class="pf w5 reveal" style="--p-bg:#FFFFFF;--p-ink:#141414;--p-acc:#E4572E" data-cat="wordpress">
-        <div class="pf-media">
+      <!-- 3 · Aloe Vital -->
+      <article class="pf w6 reveal" style="--p-acc:#3D5F2A" data-cat="shopify">
+        <div class="pf-media ar shots">
+          <div class="pf-stage">
+            <img class="pf-shot on" src="assets/work/aloevital-1.jpg" alt="Aloe Vital — project cover" width="1400" height="1027" loading="lazy" decoding="async">
+            <img class="pf-shot" src="assets/work/aloevital-2.jpg" alt="Aloe Vital — bestsellers with add-to-cart" width="1400" height="1027" loading="lazy" decoding="async">
+          </div>
+          <div class="pf-thumbs" role="group" aria-label="Aloe Vital screenshots">
+            <button type="button" aria-pressed="true" aria-label="Show project cover"><img src="assets/work/aloevital-1-thumb.jpg" alt="" width="240" height="176" loading="lazy" decoding="async"></button>
+            <button type="button" aria-pressed="false" aria-label="Show bestsellers with add-to-cart"><img src="assets/work/aloevital-2-thumb.jpg" alt="" width="240" height="176" loading="lazy" decoding="async"></button>
+          </div>
+        </div>
+        <div class="pf-body">
+          <div class="pf-top"><span class="pf-cat">Shopify · DTC</span><a class="pf-link" href="https://aloevital.bio" target="_blank" rel="noopener" aria-label="Visit live site: Aloe Vital"><span>↗</span></a></div>
+          <h3>Aloe Vital</h3>
+          <p>Shopify storefront rebuilt from scratch for Aloe Vital's DE/EU rollout. Hero, product pages, subscription checkout, and CMS.</p>
+          <ul class="pf-tags"><li>Shopify</li><li>Liquid</li><li>DTC</li><li>Subscriptions</li></ul>
+        </div>
+      </article>
+
+      <!-- 4 · Folio -->
+      <article class="pf w6 reveal" style="--d:.1s;--p-bg:#FFFFFF;--p-ink:#141414;--p-acc:#E4572E" data-cat="wordpress">
+        <div class="pf-media ar">
           <span class="pf-metric"><b>Page 2 → Top 3</b> on primary term</span>
           <div class="pf-stage">
             <div class="pf-browser">
@@ -893,41 +903,6 @@ footer{background:var(--deep);color:var(--on-deep);padding:2.6rem 0}
           <h3>Folio Studio</h3>
           <p>Editorial WP site with deep technical SEO. From page-2 obscurity to a top-3 ranking on the primary term.</p>
           <ul class="pf-tags"><li>Editorial WordPress</li><li>Technical SEO</li></ul>
-        </div>
-      </article>
-
-      <!-- 4 · Atlas -->
-      <article class="pf w7 reveal" style="--d:.1s;--p-bg:#EEF1EA;--p-ink:#1F3A2D;--p-acc:#D98E32" data-cat="shopify">
-        <div class="pf-media">
-          <div class="pf-stage">
-            <div class="pf-browser">
-              <div class="pf-chrome"><i></i><i></i><i></i><span class="pf-url">atlas camp · shopify</span></div>
-              <div class="pf-viewport">
-                <div class="site v-shop">
-                  <div class="s-nav"><b>Atlas Camp</b><span></span><span></span><span></span><em>Stores</em></div>
-                  <div class="s-hero"><div><h4>Build your kit.</h4><u></u><u class="sh"></u><em>Open configurator</em></div><div class="s-art"><i></i></div></div>
-                  <div class="s-grid"><div><i></i><u></u><u class="sh"></u></div><div><i></i><u></u><u class="sh"></u></div><div><i></i><u></u><u class="sh"></u></div></div>
-                  <div class="s-band"><h5>Lookbook</h5><u></u><u class="sh"></u></div>
-                  <div class="s-grid"><div><i></i><u></u></div><div><i></i><u></u></div><div><i></i><u></u></div></div>
-                  <div class="s-foot"><u></u><u></u><u></u><u></u></div>
-                </div>
-              </div>
-            </div>
-            <div class="pf-phone"><div class="pf-phone-screen">
-              <div class="site v-shop m">
-                <div class="s-nav"><b>Atlas Camp</b><em>≡</em></div>
-                <div class="s-hero"><div><h4>Build your kit.</h4><u></u><em>Configure</em></div><div class="s-art"><i></i></div></div>
-                <div class="s-grid"><div><i></i><u></u></div><div><i></i><u></u></div></div>
-                <div class="s-foot"><u></u><u></u></div>
-              </div>
-            </div></div>
-          </div>
-        </div>
-        <div class="pf-body">
-          <div class="pf-top"><span class="pf-cat">Shopify · Retail</span><a class="pf-link" href="#" aria-label="Live preview: Atlas Camp Outfitters"><span>↗</span></a></div>
-          <h3>Atlas Camp Outfitters</h3>
-          <p>Headless Shopify with a custom product configurator. Lookbook, store locator, and POS sync.</p>
-          <ul class="pf-tags"><li>Headless Shopify</li><li>Product configurator</li><li>POS sync</li></ul>
         </div>
       </article>
 
@@ -1508,6 +1483,21 @@ pffs.forEach((b, i) => b.addEventListener('click', () => {
 movePff();
 addEventListener('resize', movePff);
 if (document.fonts) document.fonts.ready.then(movePff);
+
+// real-project galleries: thumbnails switch the screenshot
+document.querySelectorAll('.pf-thumbs').forEach(bar => {
+  const shots = [...bar.parentElement.querySelectorAll('.pf-shot')];
+  const btns = [...bar.querySelectorAll('button')];
+  let want = 0;
+  const pick = i => {
+    want = i;
+    btns.forEach((b, k) => b.setAttribute('aria-pressed', k === i));
+    // swap only once the screenshot is decoded, so the fade never passes through a blank frame
+    const show = () => { if (want === i) shots.forEach((x, k) => x.classList.toggle('on', k === i)); };
+    shots[i].decode ? shots[i].decode().then(show, show) : show();
+  };
+  btns.forEach((b, i) => { b.addEventListener('click', () => pick(i)); b.addEventListener('mouseenter', () => pick(i)); });
+});
 
 // project cards: 3D tilt, cursor spotlight, scroll-through preview
 if (!reduce && matchMedia('(hover: hover)').matches) {
