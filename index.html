@@ -312,7 +312,6 @@ nav.hide{transform:translateY(-100%)}
 .pf:hover .pf-tags li{background:var(--blue-soft);color:var(--blue)}
 .pf-cta{display:flex;align-items:center;justify-content:center;gap:1.2rem;flex-wrap:wrap;margin-top:3rem}
 .pf-cta p{font-family:var(--display);font-weight:700;font-size:1.15rem;letter-spacing:-.02em}
-.pf-note{text-align:center;font-family:var(--mono);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:1.6rem}
 
 /* ---------- testimonials ---------- */
 .quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
@@ -807,8 +806,8 @@ footer{background:var(--deep);color:var(--on-deep);padding:2.6rem 0}
       <span class="pff-ind" aria-hidden="true"></span>
       <button class="pff active" data-f="all" aria-pressed="true">All projects <sup>7</sup></button>
       <button class="pff" data-f="shopify" aria-pressed="false">Shopify <sup>3</sup></button>
-      <button class="pff" data-f="wordpress" aria-pressed="false">WordPress <sup>3</sup></button>
-      <button class="pff" data-f="custom" aria-pressed="false">Custom builds <sup>1</sup></button>
+      <button class="pff" data-f="wordpress" aria-pressed="false">WordPress <sup>2</sup></button>
+      <button class="pff" data-f="custom" aria-pressed="false">Custom builds <sup>2</sup></button>
     </div>
 
     <!--
@@ -930,35 +929,8 @@ footer{background:var(--deep);color:var(--on-deep);padding:2.6rem 0}
         </div>
       </article>
 
-      <!-- 6 · Quiet Brew -->
-      <article class="pf w6 reveal" style="--d:.1s;--p-bg:#1F1B17;--p-ink:#F3E9DC;--p-acc:#E0A458" data-cat="wordpress">
-        <div class="pf-media ar">
-          <div class="pf-stage">
-            <div class="pf-browser">
-              <div class="pf-chrome"><i></i><i></i><i></i><span class="pf-url">quiet brew · wordpress</span></div>
-              <div class="pf-viewport">
-                <div class="site v-service dark">
-                  <div class="s-nav"><b>Quiet Brew Co.</b><span></span><span></span><span></span><em>Visit</em></div>
-                  <div class="s-hero"><div><h4>Events this week.</h4><u></u><u class="sh"></u><em>See what's on</em></div><div class="s-art"><i></i></div></div>
-                  <div class="s-grid"><div><i></i><u></u><u class="sh"></u></div><div><i></i><u></u><u class="sh"></u></div><div><i></i><u></u><u class="sh"></u></div></div>
-                  <div class="s-band"><h5>On tap</h5><u></u><u class="sh"></u></div>
-                  <div class="s-grid"><div><i></i><u></u></div><div><i></i><u></u></div><div><i></i><u></u></div></div>
-                  <div class="s-foot"><u></u><u></u><u></u><u></u></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="pf-body">
-          <div class="pf-top"><span class="pf-cat">WordPress · Local</span><a class="pf-link" href="#" aria-label="Live preview: Quiet Brew Co."><span>↗</span></a></div>
-          <h3>Quiet Brew Co.</h3>
-          <p>Local taproom site with events CMS, GBP integration, and ongoing maintenance retainer.</p>
-          <ul class="pf-tags"><li>Events CMS</li><li>Google Business</li><li>Maintenance</li></ul>
-        </div>
-      </article>
-
-      <!-- 7 · Studio 47 -->
-      <article class="pf w6 reveal" style="--p-bg:#F3F2EF;--p-acc:#E2342D" data-cat="custom">
+      <!-- 6 · Studio 47 -->
+      <article class="pf w6 reveal" style="--d:.1s;--p-bg:#F3F2EF;--p-acc:#E2342D" data-cat="custom">
         <div class="pf-media ar shots fit">
           <div class="pf-stage">
             <img class="pf-shot on" src="assets/work/studio47-1.jpg" alt="Studio 47 — project cover" width="1400" height="875" loading="lazy" decoding="async">
@@ -986,13 +958,42 @@ footer{background:var(--deep);color:var(--on-deep);padding:2.6rem 0}
           <ul class="pf-tags"><li>Web app</li><li>Admin dashboard</li><li>Inventory system</li></ul>
         </div>
       </article>
+
+      <!-- 7 · SafeSpend -->
+      <article class="pf w6 reveal" style="--p-bg:#F4F2EC;--p-acc:#12606B" data-cat="custom">
+        <div class="pf-media ar shots fit">
+          <div class="pf-stage">
+            <img class="pf-shot on" src="assets/work/safespend-1.jpg" alt="SafeSpend — project cover" width="1400" height="875" loading="lazy" decoding="async">
+            <img class="pf-shot" src="assets/work/safespend-2.jpg" alt="SafeSpend — sign in with email code" width="1400" height="875" loading="lazy" decoding="async">
+            <img class="pf-shot" src="assets/work/safespend-3.jpg" alt="SafeSpend — home screen with the safe-to-spend number" width="1400" height="875" loading="lazy" decoding="async">
+            <img class="pf-shot" src="assets/work/safespend-4.jpg" alt="SafeSpend — add entry sheet" width="1400" height="875" loading="lazy" decoding="async">
+            <img class="pf-shot" src="assets/work/safespend-5.jpg" alt="SafeSpend — history by month and category" width="1400" height="875" loading="lazy" decoding="async">
+            <img class="pf-shot" src="assets/work/safespend-6.jpg" alt="SafeSpend — monthly summary" width="1400" height="875" loading="lazy" decoding="async">
+            <img class="pf-shot" src="assets/work/safespend-7.jpg" alt="SafeSpend — settings with currencies and income split" width="1400" height="875" loading="lazy" decoding="async">
+          </div>
+          <div class="pf-thumbs" role="group" aria-label="SafeSpend screenshots">
+            <button type="button" aria-pressed="true" aria-label="Show project cover"><img src="assets/work/safespend-1-thumb.jpg" alt="" width="240" height="150" loading="lazy" decoding="async"></button>
+            <button type="button" aria-pressed="false" aria-label="Show sign in"><img src="assets/work/safespend-2-thumb.jpg" alt="" width="240" height="150" loading="lazy" decoding="async"></button>
+            <button type="button" aria-pressed="false" aria-label="Show home screen"><img src="assets/work/safespend-3-thumb.jpg" alt="" width="240" height="150" loading="lazy" decoding="async"></button>
+            <button type="button" aria-pressed="false" aria-label="Show add entry"><img src="assets/work/safespend-4-thumb.jpg" alt="" width="240" height="150" loading="lazy" decoding="async"></button>
+            <button type="button" aria-pressed="false" aria-label="Show history"><img src="assets/work/safespend-5-thumb.jpg" alt="" width="240" height="150" loading="lazy" decoding="async"></button>
+            <button type="button" aria-pressed="false" aria-label="Show summary"><img src="assets/work/safespend-6-thumb.jpg" alt="" width="240" height="150" loading="lazy" decoding="async"></button>
+            <button type="button" aria-pressed="false" aria-label="Show settings"><img src="assets/work/safespend-7-thumb.jpg" alt="" width="240" height="150" loading="lazy" decoding="async"></button>
+          </div>
+        </div>
+        <div class="pf-body">
+          <div class="pf-top"><span class="pf-cat">Personal · Mobile PWA</span><a class="pf-link" href="https://safespend-iota.vercel.app" target="_blank" rel="noopener" aria-label="Visit live site: SafeSpend"><span>↗</span></a></div>
+          <h3>SafeSpend</h3>
+          <p>Mobile-first budget app for freelancers paid in one currency and spending in another. One number — “safe to spend” — plus automatic savings/tax splits, offline use, and sync across devices.</p>
+          <ul class="pf-tags"><li>PWA</li><li>Mobile app</li><li>Fintech</li><li>Offline-first</li></ul>
+        </div>
+      </article>
     </div>
 
     <div class="pf-cta reveal">
       <p>Have a project like these?</p>
       <a href="#contact" class="btn btn-fill">Start a project <i>→</i></a>
     </div>
-    <p class="pf-note">Imagery is placeholder — replace with real screenshots once your projects are confirmed.</p>
   </div>
 </section>
 
